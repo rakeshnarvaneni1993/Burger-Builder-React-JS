@@ -3,10 +3,11 @@ import BurgerIngredient from './Burger-Ingredients/Burger-Ingredients';
 import classes from './Burger-Ingredients/Burger-Ingredients.css';
 
 const burgerBuilder = (props) => {
-    // const burgerArray = Object.keys(props.types).map((key, i) => {
-    //     return <BurgerIngredient key={i} type={props.types[key]}/>
-    // });
-    // console.log(burgerArray)
+    const burgerArray = Object.keys(props.types).map((key, j) => {
+        return [...Array(props.types[key])].map((_, i) => {
+            return <BurgerIngredient key={i + j} type={key}/>
+        });
+    });
     return (
         <div>
             <div className={classes.TopBun}>
@@ -17,9 +18,7 @@ const burgerBuilder = (props) => {
                 <div className={classes.Seed5}></div>
                 <div className={classes.Seed6}></div>
             </div>
-                <BurgerIngredient type = 'salad'/>
-                <BurgerIngredient type= 'meat'/>
-                <BurgerIngredient type= 'cheese'/> 
+                {burgerArray}
             <div className={classes.BottomBun}></div>
         </div>
     )
