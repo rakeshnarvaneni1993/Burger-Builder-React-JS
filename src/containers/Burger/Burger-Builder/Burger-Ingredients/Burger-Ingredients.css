@@ -1,13 +1,13 @@
 .TopBun{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #fc5223;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
   }
   .BottomBun {
     width: 100%;
-    height: 75px;
+    height: 65px;
     background-color: #fc5223;
     margin-top: 10px;
   }
@@ -74,4 +74,11 @@
     background-color: white;
     border-radius: 50%;
     margin-left: 80%;;
+  }
+
+  .Burger {
+      height: 300px;
+      overflow-y: auto;
+      width: 50%;
+      margin: 0 auto;
   }

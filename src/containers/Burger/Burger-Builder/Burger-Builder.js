@@ -9,7 +9,7 @@ const burgerBuilder = (props) => {
         });
     });
     return (
-        <div>
+        <div className={classes.Burger}>
             <div className={classes.TopBun}>
                 <div className={classes.Seed1}></div>
                 <div className={classes.Seed2}></div>

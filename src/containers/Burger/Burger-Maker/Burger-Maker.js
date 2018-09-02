@@ -1,6 +1,6 @@
 import React from 'react';
 import BurgerMakerRow from './BurgerMakerRows/BurgerMakerRow';
-
+import classes from './Burger-Maker.css';
 const burgerMaker = (props) => {
     const availableIngredients = [
         {label: 'Salads', value: 'salad'},
@@ -10,7 +10,11 @@ const burgerMaker = (props) => {
     const buttons = availableIngredients.map((ing, i) => {
         return <BurgerMakerRow update = {props.update} key={i} value = {ing.value} label={ing.label}/>
     })
-    return buttons;
+    return (
+        <div className={classes.Maker}>
+            {buttons}
+        </div>
+    );
 }
 
 export default burgerMaker;

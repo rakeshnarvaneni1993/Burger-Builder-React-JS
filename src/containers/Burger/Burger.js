@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import BurgerBuilder from './Burger-Builder/Burger-Builder';
 import BurgerMaker from './Burger-Maker/Burger-Maker';
+import classes from './Burger.css';
+
 class Burger extends Component {
     state = {
         totalPrice: 0,
@@ -39,7 +41,7 @@ class Burger extends Component {
         return (
            <div>
                 <BurgerBuilder types = {this.state.burgerConfig}/>
-                <div>Price: ${this.state.totalPrice}</div>
+                <div className={classes.Price}>Price: ${this.state.totalPrice}</div>
                 <BurgerMaker update = {this.updateAvailableIngredients}/>
            </div>     
         )
